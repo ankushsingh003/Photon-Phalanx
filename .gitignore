@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Models
+saved_models/
+*.h5
+*.h1
+*.pth
+*.pt
+
+# Logs
+*.log
+training.err
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
