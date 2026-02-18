@@ -4,11 +4,12 @@ FROM python:3.9-slim
 # Set the working directory to /app
 WORKDIR /app
 
-# Install system dependencies for OpenCV/other libs if needed
-RUN apt-get update && apt-get install -y \
+# Install system dependencies
+RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends \
     build-essential \
     libgl1-mesa-glx \
-    && rm -rf /var/lib/apt/lists/*
+    libglib2.0-0 \
+    && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Copy the requirements file into the container
 COPY requirements.txt .
