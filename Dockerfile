@@ -1,12 +1,11 @@
-# Use an official lightweight Python image.
-FROM python:3.9-slim
+# Use the standard Python image (not slim) for better build tool support
+FROM python:3.9
 
 # Set the working directory to /app
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update --fix-missing && apt-get install -y --no-install-recommends \
-    build-essential \
+# Install only necessary runtime libraries (build-essential is already in the non-slim image)
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libgl1-mesa-glx \
     libglib2.0-0 \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
