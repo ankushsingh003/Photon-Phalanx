@@ -14,8 +14,6 @@
 *   **Multi-Class Defect Detection**: Classifies imagery into 6 distinct categories:
     *   🛡️ **Physical Damage**: Cracks and structural hits.
     *   ⚡ **Electrical Damage**: Burn marks and circuit faults.
-Classifies imagery into 6 distinct categories:
-    *   ❄️ **Snow Coverage**: Obstruction analysis.
     *   🐦 **Bird-Drop**: Localized fouling detection.
     *   🌪️ **Dusty**: Efficiency loss assessment.
     *   ✅ **Clean**: Operational excellence verification.
